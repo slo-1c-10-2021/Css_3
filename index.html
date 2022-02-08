@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<title>Odliczanie dni do wydarzenia </title>
+	
+	<script>
+	function odliczanie()
+	{
+		var dzisiaj = new Date();
+		var dzien = dzisiaj.getDate();
+		var miesiac = dzisiaj.getMonth()+1;
+		var rok = dzisiaj.getFullYear();
+		var godzina = dzisiaj.getHours();
+		var minuta = dzisiaj.getMinutes();
+		var sekunda = dzisiaj.getSeconds();
+		
+		
+		var end = new Date("7/20/2022");
+		var endDzien = end.getDate();
+		var endMiesiac = end.getMonth()+1;
+		var endRok = end.getFullYear();
+		
+		var pD = endDzien - dzien; 
+		var pM = endMiesiac - miesiac; 
+		var pR = endRok - rok; 
+		
+		
+		
+		document.getElementById("aktualnaData").innerHTML = "Aktualna data: "+godzina+":"+minuta+":"+sekunda+" | "+dzien+"/"+miesiac+"/"+rok; 
+		document.getElementById("dataWydarzenia").innerHTML = "Data wydarzenia do którego obliczamy liczbę dni: "+endDzien+"/"+endMiesiac+"/"+endRok;
+		document.getElementById("dniDoWydarzenia").innerHTML ="Do wydarzenia pozostało: "+pD+" Dni"+" "+pM+" Miesięcy";
+		document.getElementById("zegar").innerHTML = 
+			godzina+":"+minuta+":"+sekunda+" | "+dzien+"/"+miesiac+"/"+rok; 
+			setTimeout("odliczanie()",1000);
+	}
+	</script>
+
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+</head>
+<body onload="odliczanie();">
+
+
+<div id="container">
+	<div id="topBar">Ile dni pozostało do urodzin.</div>
+	<div id="aktualnaData">...</div> 
+	<br/>
+	<div id="dataWydarzenia">...</div>
+	<br/>
+	<br/>	
+	<div id="dniDoWydarzenia">...</div> 
+	
+<script type="text/javascript" >
+	odliczanie();
+</script>
+	<div id="footer"> Strona wykonana przez: Jakub Czerwiak 2C</div>
+</div>
+</body>
+</html>
+
+<script type="text/javascript" >
+	function odliczanie()
+	{
+		var dzisiaj = new Date();
+		var dzien = dzisiaj.getDate();
+		var miesiac = dzisiaj.getMonth()+1;
+		var rok = dzisiaj.getFullYear();
+		var godzina = dzisiaj.getHours();
+		var minuta = dzisiaj.getMinutes();
+		var sekunda = dzisiaj.getSeconds();
+		
+	}
+	</script>
+	
+	
